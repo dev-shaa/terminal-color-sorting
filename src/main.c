@@ -19,7 +19,7 @@ int cells[WIDTH][HEIGHT];
 
 void start();
 void repaint();
-void get_input();
+void update();
 int is_risolved();
 void destroy();
 
@@ -30,7 +30,7 @@ int main(int argc, char const *argv[])
 
     while (!is_risolved())
     {
-        get_input();
+        update();
         repaint();
     }
 
@@ -101,7 +101,7 @@ void repaint()
     printf("\n\n");
 }
 
-void get_input()
+void update()
 {
     int from, to;
 
