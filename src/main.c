@@ -157,7 +157,7 @@ int is_risolved()
 
 void destroy()
 {
-    for (int i = 0; i < 6; i++)
+    for (int i = 0; i < COLORS_COUNT; i++)
     {
         repaint();
 
