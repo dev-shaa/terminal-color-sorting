@@ -17,10 +17,20 @@ char *colors[] = {
 
 int cells[WIDTH][HEIGHT];
 
+/// @brief Called when starting the game.
 void start();
+
+/// @brief Repaints the screen.
 void repaint();
+
+/// @brief
 void update();
-int is_risolved();
+
+/// @brief Checks if the game is resolved.
+/// @return 1 if the game is resolved, 0 otherwise.
+int is_resolved();
+
+/// @brief Called when the game ends.
 void destroy();
 
 int main(int argc, char const *argv[])
@@ -28,7 +38,7 @@ int main(int argc, char const *argv[])
     start();
     repaint();
 
-    while (!is_risolved())
+    while (!is_resolved())
     {
         update();
         repaint();
@@ -128,7 +138,7 @@ void update()
     }
 }
 
-int is_risolved()
+int is_resolved()
 {
     for (int i = 0; i < WIDTH; i++)
     {
