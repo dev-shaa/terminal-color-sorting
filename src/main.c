@@ -74,7 +74,7 @@ void start()
     {
         for (int j = COLORS_COUNT - 1; j >= 1; j--)
         {
-            int r = rand() % j;
+            int r = rand() % (j + 1);
 
             int temp = cells[j][i];
             cells[j][i] = cells[r][i];
